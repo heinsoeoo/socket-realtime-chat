@@ -1,0 +1,26 @@
+<div class="card">
+	<div class="card-header text-center">
+	Welcome to {{name}}
+	</div>
+
+	<div class="card-body">
+		<h5 class="card-title text-center">Please fill your informations!</h5>
+		<div class="container">
+			<form class="offset-4 col-sm-4" action="/enter-room" method="post">
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" name="name" required>
+					<small id="nameHelp" class="form-text text-muted">This name will represent you in room.</small>
+				</div>
+
+				<!--<div class="form-group">-->
+					<!--<label for="age">Age</label>-->
+					<!--<input type="number" class="form-control" id="age" placeholder="Enter age" name="age">-->
+				<!--</div>-->
+		</div>
+			<div class="text-center">
+				<button type="submit" class="btn btn-primary">Enter Room</button>
+			</div>
+		</form>
+	</div>
+</div>

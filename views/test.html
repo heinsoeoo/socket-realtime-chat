@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		:root {
+	--primaryColor: sandybrown;
+	--textColor: #666b69;
+	--backgroundColor: #333130;
+}
+
+/* Switch component */
+
+.Switch > span {
+	position: relative;
+	padding-left: 3em;
+	user-select: none; /* just for the demo */
+}
+
+	.Switch > input[type='checkbox'] {
+		display: none;
+	}
+
+	.Switch > span:before {
+		background-color: var(--textColor);
+		border-radius: 1.2em;
+		border: .1em solid transparent;
+		content: '';
+		height: 1.2em;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		top: .3em;
+		transition: background-color .2s;
+		width: 2.4em;
+	}
+
+	.Switch > span:after {
+		background-color: #e6f2ee;
+		border-radius: 50%;
+		border: .1em solid var(--textColor);
+		content: '';
+		height: 1.2em;
+		left: 0;
+		position: absolute;
+		top: .3em;
+		transition: border-color, transform .2s;
+		width: 1.2em;
+	}
+
+	.Switch > input:checked + span:before {
+		background-color: var(--primaryColor);
+	}
+
+	.Switch > input:checked + span:after {
+		border-color: var(--primaryColor);
+		transform: translateX(100%);
+	}
+
+/* Basics */
+
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:200,300');
+
+* {
+	box-sizing: inherit;
+}
+
+html {
+	background-color: var(--backgroundColor);
+	background-image: radial-gradient(ellipse at top, var(--backgroundColor), transparent), radial-gradient(ellipse at bottom, var(--textColor), transparent);
+	box-sizing: border-box;
+	color: var(--textColor);
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 62.5%;
+	font-weight: 300;
+}
+
+body {
+	align-content: center;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+	justify-content: space-around;
+	margin: 0;
+	padding: 5vmax;
+}
+
+	body > main {
+		background: #fff;
+		box-shadow: 0 1em 1em -.5em rgba(0,0,0,.5);
+		padding: 4em;
+	}
+
+	fieldset{
+		border: none !important;
+	}
+
+		body > main > fieldset {
+			border: 0;
+			margin: 0;
+			min-width: 0;
+			padding: .01em 0 0 0;
+		}
+
+			body > main > fieldset > legend {
+				border: none;
+				display: table;
+				font-size: 2.6em;
+				font-weight: 200;
+				line-height: 2;
+				margin: 0;
+				padding: 0 0 .3em;
+				width: 100%;
+			}
+
+			body > main > fieldset > label {
+				align-items: baseline;
+				display: flex;
+				flex-flow: row wrap;
+				font-size: 1.6em;
+				line-height: 2;
+				padding: .5em 0;
+				position: relative;
+				text-align: left;
+			}
+	</style>
+</head>
+<body>
+	<div>
+	<main>
+		<fieldset>
+			<legend></legend>
+			<label class="Switch">
+				<input type="checkbox" name="ohh shiny" required>
+				<span></span>
+			</label>
+		</fieldset>
+	</main>
+</div>
+</body>
+</html>

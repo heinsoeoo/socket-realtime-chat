@@ -1,0 +1,32 @@
+<div class="card">
+	<div class="card-header text-center">
+        Welcome <span id="name">{{name}}</span>!
+	</div>
+
+	<div class="card-body">
+		<h5 class="card-title text-center">Socket Chat Room</h5>
+		<span pull></span>
+		<div class="container">
+			<div class="row" style="min-height: 300px; border: 1px solid #ccc; border-radius: 5px">
+				<ul id="messages" style="max-height: 275px">
+				</ul>
+                <div id="typing" style="max-height: 25px;">
+                    Someone is typing.....
+                </div>
+			</div>
+            <div class="row">
+                <input type="text" id="message" class="form-control col col-sm-11" placeholder="Type here .....">
+                <button class="btn btn-success col col-sm-1" id="btn">Send</button>
+            </div>
+            <!--<button type="button" onclick="playAudio()">play</button>-->
+            <audio id="noti">
+                <source src="{{audio}}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+	</div>
+</div>
+
+{{#each scripts}}
+	<script src="{{script}}"></script>
+{{/each}}
