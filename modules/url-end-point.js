@@ -71,7 +71,7 @@ class URLEndPoint {
 
 	run(){
 		var server = this.app.listen(this.port, this.host, () => {
-			console.log("listing on port: "+this.port);
+			console.log("listening on port: "+this.port);
 		});
 
 		var io = socketIO.listen(server);

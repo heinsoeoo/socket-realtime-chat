@@ -52,7 +52,7 @@ function noti() {
 //Listening
 
 socket.on('send-message', function (data) {
-	messages.append("<li><p><strong>"+data.name+" : </strong>"+data.message+"</p></li>");
+	messages.append("<li class='others'><p><strong>"+data.name+" : </strong>"+data.message+"</p></li>");
     messages.animate({scrollTop: messages.prop("scrollHeight")}, 500);
     socket.emit('stop-typing');
     noti();
